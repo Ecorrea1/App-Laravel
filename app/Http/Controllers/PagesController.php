@@ -28,8 +28,13 @@ class PagesController extends Controller
     }
 
     public function notas(){
-        $notas = App\Nota::all();
-         return view('notas',\compact('notas'));
+       
+       // este metodo ayuda a consumir todos lso datos de la bd
+       // $notas = App\Nota::all();
+
+       //Este metodo tiene paginacion ,asi qeu puedo filtrar cuantos tipos de datos quier que se meustre
+        $notas = App\Nota::paginate(3); // paginate() es el filtro y dentro "()" coloco el numero de elelmentos en cuestion
+        return view('notas',\compact('notas'));
     }
 
     public function detalle($id){
@@ -70,6 +75,16 @@ class PagesController extends Controller
 
 
         return back()->with('mensaje', 'Nota Actualizada'); // para traer devuelta 
+        
+     }
+
+     public function eliminar($id){
+
+
+        $notaEliminar = App\Nota::findOrFail($id);
+        $notaEliminar->delete();
+
+        return back()->with('mensaje', 'Nota Eliminada'); // para traer devuelta 
         
      }
 }

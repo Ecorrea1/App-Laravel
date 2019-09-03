@@ -59,10 +59,20 @@
       <td>{{$item->descripcion}}</td>
       <td>
           <a href=" {{ route('notas.editar' , $item) }} "  class="btn btn-primary  btn-sm">Editar</a>
+
+          <form action="{{ route('notas.eliminar' , $item)  }}" method="POST" class="d-inline">
+            @method('DELETE')
+            @csrf
+              <button class="btn btn-danger btn-sm" type="submit">Eliminar</button>
+          </form>
+
+
       </td>
     </tr>
         @endforeach
   </tbody>
 </table>
+
+{{$notas->links()}} <!-- el Link es un elemento de paginacion grafico de Bootstrap-->
 @endsection
 
