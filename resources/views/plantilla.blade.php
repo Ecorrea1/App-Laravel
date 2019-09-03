@@ -7,26 +7,26 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="public/css/styles.css">
+    <link rel="stylesheet" href="/../public/css/styles.css">
     <title>Primera Aplicacion con Laravel</title>
   </head>
   <body>
 
-            <ul class=" navbar navbar-dark bg-dark nav justify-content-center">
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('inicio') }}">Inicio</a>
+            <ul class=" navbar navbar-dark bg-dark nav justify-content-center  ">
+            <li class="nav-item ">
+                <a class="nav-link text-white" href="{{ route('inicio') }}">Inicio</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('empresas')}} ">Empresas</a>
+                <a class="nav-link text-white" href="{{ route('empresas')}} ">Empresas</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('blog') }}">Blog</a>
+                <a class="nav-link text-white" href="{{ route('blog') }}">Blog</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('nosotros') }}">Nosotros</a>
+                <a class="nav-link text-white" href="{{ route('nosotros') }}">Nosotros</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('notas') }}">Notas</a>
+                <a class="nav-link text-white" href="{{ route('notas') }}">Notas</a>
             </li>
             </ul>
 

@@ -1,12 +1,13 @@
 @extends('plantilla')
 
 @section('seccion')
-<h1>Welcome to Nosotros</h1>
+<h1 class="text-center">Welcome to Nosotros</h1>
 @foreach($equipo as $item)
-    <a href="{{ route ('nosotros',$item)}}" class="h4 text-danger">{{$item}}</a><br>
-
+        <div class="my-3 ">
+            <a href="{{ route ('nosotros',$item)}}" class="h4 text-danger ">{{$item}}</a><br>
+        </div>
 @endforeach
-
+<div class=" my-5"> 
 @if(!empty($nombre))
 
 
@@ -51,4 +52,5 @@
 
 
 @endif
+</div>
 @endsection

@@ -2,10 +2,10 @@
 
 @section('seccion')
 
-<h1>Editar nota  {{ $nota->id}}</h1>
+<h1 class="text-center my-3">Editar nota  {{ $nota->id}}</h1>
 
 @if (session('mensaje'))
-<div class="alert-success">
+<div class="alert-success ">
     {{session('mensaje')}}
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
@@ -16,7 +16,7 @@
 
 
 
-<form action="{{ route('notas.update' , $nota->id) }}" method="POST" >
+<form action="{{ route('notas.update' , $nota->id) }}" method="POST" class="my-5" >
     @csrf
     @method('PUT')
 

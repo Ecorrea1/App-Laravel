@@ -1,16 +1,16 @@
 @extends('plantilla')
 
 @section('seccion')
-<h1>Notas</h1>
+<h1 class="text-center my-3">Notas</h1>
         @if (session('mensaje'))
         <div class="alert-success">
             {{session('mensaje')}}
         </div>
-        <br>
+    
         @endif
 
-<br>
-    <form action="{{ route('notas.crear') }}" method="POST" >
+
+    <form action="{{ route('notas.crear') }}" method="POST" class="my-5">
         @csrf
 
         @error('nombre')
@@ -36,7 +36,7 @@
 
         <button class="btn btn-primary btn-block" type="submit">Agregar</button>
     </form>
-        <br>
+      
 
 <table class="table table-dark">
   <thead>
